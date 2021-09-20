@@ -70,13 +70,13 @@ static NSDateFormatter *dateFormatter = nil;
                 int weekNumber = 0;
                 
                 // Parse the day of the week
-                if ([dayString rangeOfString:@"SU"].location != NSNotFound)      dayOfWeek = EKSunday;
-                else if ([dayString rangeOfString:@"MO"].location != NSNotFound) dayOfWeek = EKMonday;
-                else if ([dayString rangeOfString:@"TU"].location != NSNotFound) dayOfWeek = EKTuesday;
-                else if ([dayString rangeOfString:@"WE"].location != NSNotFound) dayOfWeek = EKWednesday;
-                else if ([dayString rangeOfString:@"TH"].location != NSNotFound) dayOfWeek = EKThursday;
-                else if ([dayString rangeOfString:@"FR"].location != NSNotFound) dayOfWeek = EKFriday;
-                else if ([dayString rangeOfString:@"SA"].location != NSNotFound) dayOfWeek = EKSaturday;
+                if ([dayString rangeOfString:@"SU"].location != NSNotFound)      dayOfWeek = EKWeekdaySunday;
+                else if ([dayString rangeOfString:@"MO"].location != NSNotFound) dayOfWeek = EKWeekdayMonday;
+                else if ([dayString rangeOfString:@"TU"].location != NSNotFound) dayOfWeek = EKWeekdayTuesday;
+                else if ([dayString rangeOfString:@"WE"].location != NSNotFound) dayOfWeek = EKWeekdayWednesday;
+                else if ([dayString rangeOfString:@"TH"].location != NSNotFound) dayOfWeek = EKWeekdayThursday;
+                else if ([dayString rangeOfString:@"FR"].location != NSNotFound) dayOfWeek = EKWeekdayFriday;
+                else if ([dayString rangeOfString:@"SA"].location != NSNotFound) dayOfWeek = EKWeekdaySaturday;
                 
                 // Parse the week number
                 weekNumber = [[dayString substringToIndex:dayString.length-2] intValue];
